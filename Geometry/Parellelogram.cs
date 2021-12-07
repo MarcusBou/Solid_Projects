@@ -10,10 +10,8 @@ namespace Geometri
     {
         private double angle;
         public double Angle { get { return angle; } set { angle = value; } }
-        public Parallelogram(double a, double b, double angle)
+        public Parallelogram(double a, double b, double angle): base(a, b)
         {
-            this.SideA = a;
-            this.SideB = b;
             this.Angle = angle;
         }
 

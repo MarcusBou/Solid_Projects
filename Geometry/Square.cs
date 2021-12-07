@@ -12,7 +12,6 @@ namespace Geometri
 
         public double SideA { get { return sideA; } set { sideA = value; } }
 
-        public Square() { }
         public Square(double a)
         {
             this.sideA = a;

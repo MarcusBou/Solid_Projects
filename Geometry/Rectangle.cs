@@ -11,10 +11,8 @@ namespace Geometri
         private double sideB;
         public double SideB { get { return sideB; } set { sideB = value; } }
 
-        public Rectangle() { }
-        public Rectangle(double a, double b)
+        public Rectangle(double a, double b) : base(a)
         {
-            this.SideA = a;
             this.SideB = b;
         }
 
