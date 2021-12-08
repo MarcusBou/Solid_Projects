@@ -8,27 +8,39 @@ namespace Kaffemaskinen
 {
     public class CoffeMachine_Manager
     {
-        Machine cm;
-        private static Container bp = new BrewPot(100);
-        private static Container bf = new BrewFunnel(100);
-        private static Container wc = new WaterContainer(100);
-        Container[] Containers = { wc, bf, bp};
-        public CoffeMachine_Manager()
-        {
-            cm = new Machine(Containers);
-        }
-
-        public void TurnOnMachine()
+        BasicCoffeeMachine cm = new BasicCoffeeMachine(100);    
+        
+        /// <summary>
+        ///  For Turnin coffe machine on
+        /// </summary>
+        public void TurnOnCoffeeBrewer()
         {
             cm.ChangePowestate(true);
         }
-
-        public void TurnOffMachine()
+        /// <summary>
+        ///  For Turnin coffe machine off
+        /// </summary>
+        public void TurnOffCoffeeBrewer()
         {
             cm.ChangePowestate(false);
         }
 
-        
-    
+        /// <summary>
+        /// For inserting a new filter, and since it is not the coffemachine creating the filters they are created by the manager
+        /// </summary>
+        public void ChangeFilter()
+        {
+            Filter filter = new Filter();
+            cm.Bf.NewFilter(filter);
+        }
+
+        /// <summary>
+        /// fill filter with a type to make the liquid
+        /// </summary>
+        /// <param name="types"></param>
+        public void FillFilterWith(TypesOfLiquid types)
+        {
+            cm.Bf.Filter.PrepareBrewInFilter(types);
+        }
     }
 }

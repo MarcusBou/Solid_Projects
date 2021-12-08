@@ -9,6 +9,7 @@ namespace Kaffemaskinen
     public enum TypesOfLiquid
     {
         Water,
-        Kaffe
+        Kaffe,
+        te
     }
 }

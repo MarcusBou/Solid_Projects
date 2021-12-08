@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace Kaffemaskinen
 {
-    public class Machine
+    /// <summary>
+    /// A superclass called machine having the power element
+    /// </summary>
+    public abstract class Machine
     {
-        private List<Container> containers;
-        private bool powerstate = false;
-        public List<Container> Containers { get { return containers; } }
-        public Machine(Container[] con)
+        private bool powerstate;
+        public bool Powerstate { get { return powerstate; } }
+        public Machine()
         {
-            for (int i = 0; i < con.Length; i++)
-            {
-                containers.Add(con[i]);
-            }
+            powerstate = false;
         }
         public void ChangePowestate(bool newPowerState)
         {
