@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Help_Lone
 {
-    class Character
+    public class Character
     {
         public void Die()
         {

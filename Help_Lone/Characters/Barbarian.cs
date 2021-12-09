@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Help_Lone.Interfaces
 {
-    class Barbarian : Character, ISwordFight
+    public class Barbarian : Character, ISwordFight
     {
         public void Bash()
         {
