@@ -8,10 +8,11 @@ using System.IO;
 
 namespace AWebsite
 {
-    class WebReader
+    class WebReader: IDataReader
     {
         WebRequest request;
         WebResponse response;
+
 
         public void CreateRequest(string path)
         {
@@ -29,10 +30,8 @@ namespace AWebsite
             string serverResponse;
 
             using (Stream dataStream = response.GetResponseStream())
-            {
-                // Open the stream using a StreamReader for easy access.
+            
                 StreamReader reader = new StreamReader(dataStream);
-                // Read the content.
                 serverResponse = reader.ReadToEnd();
             }
             response.Close();

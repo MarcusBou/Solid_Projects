@@ -6,7 +6,7 @@ namespace AWebsite
     {
         static void Main(string[] args)
         {
-            WebReader webReader = new WebReader();
+            IDataReader webReader = new WebReader();
             webReader.CreateRequest("https://docs.microsoft.com");
             webReader.GetResponse();
             Console.WriteLine(webReader.GetResponseString());

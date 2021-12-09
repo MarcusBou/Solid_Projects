@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace AWebsite
 {
-    interface IDataReader
+    class DataReaderManager
     {
-        public void CreateRequest(string path);
-        public void GetResponse();
-        public string GetResponseString();
     }
 }
