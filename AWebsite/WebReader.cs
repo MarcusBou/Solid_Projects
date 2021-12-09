@@ -29,13 +29,22 @@ namespace AWebsite
         {
             string serverResponse;
 
-            using (Stream dataStream = response.GetResponseStream())
+            try
+            {
+                using (Stream dataStream = response.GetResponseStream()) {
             
-                StreamReader reader = new StreamReader(dataStream);
-                serverResponse = reader.ReadToEnd();
+                    StreamReader reader = new StreamReader(dataStream);
+                    serverResponse = reader.ReadToEnd();
+                }
+                response.Close();
+                return serverResponse;
+
             }
-            response.Close();
-            return serverResponse;
+            catch
+            {
+                return "Fejl Ved Læsning";
+                throw;
+            }
         }
     }
 }
