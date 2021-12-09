@@ -16,9 +16,7 @@ namespace AWebsite
 
         public string ReadFromPath(string path)
         {
-            reader.CreateRequest(path);
-            reader.GetResponse();
-            return reader.GetResponseString();
+            return reader.GetResponseString(path);
         }
     }
 }

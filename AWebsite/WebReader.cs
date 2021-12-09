@@ -13,22 +13,12 @@ namespace AWebsite
         WebRequest request;
         WebResponse response;
 
-
-        public void CreateRequest(string path)
+        public string GetResponseString(string path)
         {
             request = WebRequest.Create(path);
             request.Credentials = CredentialCache.DefaultCredentials;
-        }
-
-        public void GetResponse()
-        {
-            response = request.GetResponse();
-        }
-
-        public string GetResponseString()
-        {
             string serverResponse;
-
+            response = request.GetResponse();
             try
             {
                 using (Stream dataStream = response.GetResponseStream()) {

@@ -8,8 +8,6 @@ namespace AWebsite
 {
     interface IDataReader
     {
-        public void CreateRequest(string path);
-        public void GetResponse();
-        public string GetResponseString();
+        public string GetResponseString(string path);
     }
 }
