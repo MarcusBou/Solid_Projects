@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Help_Lone
 {
-    public class Character
+    public abstract class Character
     {
-        public void Die()
+        public virtual void Die()
         {
             Console.WriteLine("I'm dying");
         }
 
-        public void Fight()
+        public virtual void Fight()
         {
             Console.WriteLine("I'm fighting");
         }
 
-        public void Heal()
+        public virtual void Heal()
         {
             Console.WriteLine("I'm healing");
         }

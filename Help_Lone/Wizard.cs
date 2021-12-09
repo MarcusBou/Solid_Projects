@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Help_Lone
 {
-    class Wizard : Character, IMagicMissile, IFrostNova, ITeleport
+    public class Wizard : Character, IMagicMissile, IFrostNova, ITeleport
     {
 
         public void Teleport(int x, int y)

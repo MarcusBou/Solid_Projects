@@ -4,19 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Help_Lone.Interfaces
+namespace Help_Lone
 {
-    class Knight : Character, ISwordFight, IShield
+    public class Witch : Character, IShield, ITeleport
     {
-        public void Bash()
-        {
-            Console.WriteLine("I'm bashing someone");
-        }
-
-        public void Cleave()
-        {
-            Console.WriteLine("I'm cleaving someone");
-        }
 
         public void RaiseShield()
         {
@@ -27,10 +18,10 @@ namespace Help_Lone.Interfaces
         {
             Console.WriteLine("I'm throwing shield glare");
         }
-
-        public void Slash()
+                
+        public void Teleport(int x, int y)
         {
-            Console.WriteLine("I'm slashing someone");
+            Console.WriteLine("I'm teleporting to " + x + " " + y);
         }
     }
 }

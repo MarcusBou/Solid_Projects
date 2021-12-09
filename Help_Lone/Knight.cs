@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Help_Lone.Interfaces
+namespace Help_Lone
 {
-    public class Barbarian : Character, ISwordFight
+    public class Knight : Character, ISwordFight, IShield
     {
         public void Bash()
         {
@@ -16,6 +16,16 @@ namespace Help_Lone.Interfaces
         public void Cleave()
         {
             Console.WriteLine("I'm cleaving someone");
+        }
+
+        public void RaiseShield()
+        {
+            Console.WriteLine("I'm raising my shield");
+        }
+
+        public void ShieldGlare()
+        {
+            Console.WriteLine("I'm throwing shield glare");
         }
 
         public void Slash()
