@@ -12,13 +12,14 @@ namespace Kaffemaskinen
     public class WaterContainer: Container ,ITransferContainers
     {
          public WaterContainer(double siz) : base(siz)
-        {
+            {
             
-        }
+            }
 
         public void TransferToNextContainer(Container container, double fill, TypesOfLiquid types)
         {
             container.fillContainer(fill, types);
+            this.filled = 0;
         }
     }
 }

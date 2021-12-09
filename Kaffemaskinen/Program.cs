@@ -6,7 +6,9 @@ namespace Kaffemaskinen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            Console.WriteLine("Start Kaffemaskinen!");
+            Console.ReadKey();
         }
     }
 }

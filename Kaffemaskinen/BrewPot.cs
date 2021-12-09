@@ -11,8 +11,6 @@ namespace Kaffemaskinen
     /// </summary>
     public class BrewPot : Container
     {
-        private string liquidType;
-        public string LiquidType { get { return liquidType; } }
         public BrewPot(double siz) : base(siz)
         {
 

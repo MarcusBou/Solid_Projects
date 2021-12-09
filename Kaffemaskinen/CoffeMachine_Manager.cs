@@ -42,5 +42,22 @@ namespace Kaffemaskinen
         {
             cm.Bf.Filter.PrepareBrewInFilter(types);
         }
+
+        /// <summary>
+        /// fills waterContainer with water
+        /// </summary>
+        /// <param name="amount"></param>
+        public void FillWithWater(double amount)
+        {
+            cm.Wc.fillContainer(amount, TypesOfLiquid.Water);
+        }
+
+        /// <summary>
+        /// For running a brewing cycle
+        /// </summary>
+        public void BrewDrink()
+        {
+            cm.RunCycle();
+        }
     }
 }

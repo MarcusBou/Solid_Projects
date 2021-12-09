@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Kaffemaskinen
 {
+    /// <summary>
+    /// a filter For brewing
+    /// </summary>
     public class Filter
     {
         private TypesOfLiquid typeForBrew;

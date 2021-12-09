@@ -10,6 +10,6 @@ namespace Kaffemaskinen
     {
         Water,
         Kaffe,
-        te
+        te//opgave 2 implementere te
     }
 }

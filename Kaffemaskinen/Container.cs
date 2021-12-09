@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Kaffemaskinen
 {
+    /// <summary>
+    /// containers for liquid
+    /// </summary>
     public class Container
     {
         protected double size;
@@ -21,10 +24,18 @@ namespace Kaffemaskinen
             this.filled = 0;
         }
 
+        /// <summary>
+        /// for filling a container with a certain amount
+        /// </summary>
+        /// <param name="fill"></param>
+        /// <param name="types"></param>
         public void fillContainer(double fill, TypesOfLiquid types)
         {
-            this.filled = fill;
-            this.liquid = types;
+            if (fill > size)
+            {
+                this.filled = fill;
+                this.liquid = types;
+            }
         }
     }
 }

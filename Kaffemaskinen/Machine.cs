@@ -17,6 +17,10 @@ namespace Kaffemaskinen
         {
             powerstate = false;
         }
+        /// <summary>
+        /// changes powerstate for machines
+        /// </summary>
+        /// <param name="newPowerState"></param>
         public void ChangePowestate(bool newPowerState)
         {
             powerstate = newPowerState;
