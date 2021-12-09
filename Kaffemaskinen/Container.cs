@@ -36,6 +36,10 @@ namespace Kaffemaskinen
                 this.filled = fill;
                 this.liquid = types;
             }
+            else
+            {
+                Console.Error.WriteLine("ups du spilde");
+            }
         }
     }
 }

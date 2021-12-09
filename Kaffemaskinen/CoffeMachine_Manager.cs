@@ -59,5 +59,13 @@ namespace Kaffemaskinen
         {
             cm.RunCycle();
         }
+
+        /// <summary>
+        /// switch over to espresso cup
+        /// </summary>
+        public void SwitchToEspresoo()
+        {
+            cm.ChageBrewingPot(new BrewPot(10));
+        }
     }
 }

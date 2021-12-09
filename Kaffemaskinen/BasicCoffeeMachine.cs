@@ -34,5 +34,10 @@ namespace Kaffemaskinen
                 bf.TransferToNextContainer(Bp, bf.Filled, TypesOfLiquid.Water);
             }
         }
+
+        public void ChageBrewingPot(BrewPot container)
+        {
+            bp = container;
+        }
     }
 }
