@@ -6,22 +6,8 @@ using System.Threading.Tasks;
 
 namespace Help_Lone.Interfaces
 {
-    class Witch : ICharacter, IShield, ITeleport
+    class Witch : Character, IShield, ITeleport
     {
-        public void Die()
-        {
-            Console.WriteLine("I'm dying");
-        }
-
-        public void Fight()
-        {
-            Console.WriteLine("I'm fighting");
-        }
-
-        public void Heal()
-        {
-            Console.WriteLine("I'm healing");
-        }
 
         public void RaiseShield()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Help_Lone.Interfaces
 {
-    class Barbarian : ICharacter, ISwordFight
+    class Knight : Character, ISwordFight, IShield
     {
         public void Bash()
         {
@@ -18,19 +18,14 @@ namespace Help_Lone.Interfaces
             Console.WriteLine("I'm cleaving someone");
         }
 
-        public void Die()
+        public void RaiseShield()
         {
-            Console.WriteLine("I'm dying");
+            Console.WriteLine("I'm raising my shield");
         }
 
-        public void Fight()
+        public void ShieldGlare()
         {
-            Console.WriteLine("I'm fighting");
-        }
-
-        public void Heal()
-        {
-            Console.WriteLine("I'm healing");
+            Console.WriteLine("I'm throwing shield glare");
         }
 
         public void Slash()
